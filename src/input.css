@@ -1,0 +1,29 @@
+@import "tailwindcss";
+.mt-30 {
+  margin-top: calc(var(--spacing) * 30);
+}
+body#admin {
+  overflow: hidden; /* Mencegah scroll di seluruh halaman */
+  height: 100vh; /* Pastikan tinggi body penuh */
+  display: flex;
+  flex-direction: column; /* Susun elemen dalam satu kolom */
+}
+
+.navbar-admin {
+  flex-shrink: 0; /* Navbar tetap di atas, tidak mengecil */
+}
+
+.container.hero-admin {
+  flex-shrink: 0; /* Bagian hero tidak mengecil */
+}
+
+.hero-card-santri-admin {
+  flex-grow: 1; /* Bagian ini akan mengisi sisa ruang yang tersedia */
+  overflow-y: auto; /* Bisa di-scroll kalau kontennya panjang */
+
+  scrollbar-width: none; /* Hilangkan scrollbar di Firefox */
+}
+
+.hero-card-santri-admin::-webkit-scrollbar {
+  display: none; /* Hilangkan scrollbar di Chrome, Safari, Edge */
+}
