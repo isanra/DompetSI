@@ -27,3 +27,12 @@ body#admin {
 .hero-card-santri-admin::-webkit-scrollbar {
   display: none; /* Hilangkan scrollbar di Chrome, Safari, Edge */
 }
+.rounded-tr-5xl {
+  border-top-right-radius: 70px;
+}
+.rounded-br-5xl {
+  border-bottom-right-radius: 250px;
+}
+.rounded-tl-5xl {
+  border-top-left-radius: 70px;
+}

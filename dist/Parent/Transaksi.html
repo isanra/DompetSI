@@ -8,7 +8,7 @@
   </head>
 
   <body class="bg-gray-100 md:overflow-hidden">
-    <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+    <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-b-4xl">
       <div class="px-3 py-3 lg:px-5 lg:pl-3">
         <div class="flex items-center justify-between">
           <div class="flex items-center justify-start rtl:justify-end">
@@ -33,44 +33,19 @@
               <span class="self-center text-2xl font-bold sm:text-2xl whitespace-nowrap dark:text-white">DompetSI</span>
             </a>
           </div>
-          <div class="flex items-center">
-            <div class="flex items-center ms-3">
-              <div>
-                <button type="button" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" aria-expanded="false" data-dropdown-toggle="dropdown-user">
-                  <span class="sr-only">Open user menu</span>
-                </button>
-              </div>
-              <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-sm shadow-sm dark:bg-gray-700 dark:divide-gray-600" id="dropdown-user">
-                <div class="px-4 py-3" role="none">
-                  <p class="text-sm text-gray-900 dark:text-white" role="none">Neil Sims</p>
-                  <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">neil.sims@flowbite.com</p>
-                </div>
-                <ul class="py-1" role="none">
-                  <li>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Dashboard</a>
-                  </li>
-                  <li>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Settings</a>
-                  </li>
-                  <li>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Earnings</a>
-                  </li>
-                  <li>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Sign out</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </nav>
 
-    <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
-      <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+    <aside
+      id="logo-sidebar"
+      class="fixed top-0 left-0 z-40 w-64 md:mt-25 rounded-tr-5xl h-screen pt-20 md:pt-5 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700 shadow-2xl"
+      aria-label="Sidebar"
+    >
+      <div class="h-full px-3 pb-4 overflow-y-auto">
         <ul class="space-y-2 font-medium">
           <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+            <a href="Profil.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
               <svg
                 class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                 aria-hidden="true"
@@ -86,7 +61,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+            <a href="Riwayat.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
               <svg
                 class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                 aria-hidden="true"
@@ -102,14 +77,14 @@
             </a>
           </li>
           <li class="mb-10">
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <span><i class="fa-solid fa-money-bill-1-wave shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></i></span>
-              <span class="flex-1 ms-3 whitespace-nowrap">Saldo</span>
+            <a href="Transaksi.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+              <span><i class="fa-solid fa-money-bill-transfer shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></i></span>
+              <span class="flex-1 ms-3 whitespace-nowrap">Transaksi</span>
             </a>
           </li>
 
           <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+            <a href="/dist/Masuk.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
               <svg class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3" />
               </svg>
@@ -121,40 +96,11 @@
     </aside>
 
     <div class="flex-1 p-6 sm:ml-64 mt-20">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-        <div class="bg-white p-6 shadow-md rounded-lg flex items-center">
-          <img
-            src="https://media.licdn.com/dms/image/v2/D4D03AQG57T_BHT0xOw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684638937145?e=1745452800&v=beta&t=5PXD2EZKgLokn6jBu8FjwekhUboSg5tRNNYc_uf7zEQ"
-            alt="Foto Orang"
-            class="w-25 sm:w-40 h-auto rounded-full mr-4 shadow-md border"
-          />
-          <div>
-            <h3 class="text-2xl md:text-5xl font-bold">Azzam hudiya rahman</h3>
-            <p class="text-sm md:text-xl text-gray-600">Kelas 2 Pondok/ 3 SMA</p>
-          </div>
-        </div>
-        <div class="bg-white p-6 shadow-md rounded-lg md:col-span-1 lg:col-span-1">
-          <div class="grid grid-cols-1 gap-2">
-            <h4 class="text-lg font-bold">Riwayat Pengambilan Terbaru</h4>
-            <div class="bg-white p-2 shadow-md rounded-lg h-20">
-              <p class="text-md text-gray-600">01/25/2025</p>
-              <h3 class="text-xl md:text-4xl font-bold">Rp 300.000</h3>
-            </div>
-            <div class="bg-white p-2 shadow-md rounded-lg h-20">
-              <p class="text-md text-gray-600">01/25/2025</p>
-              <h3 class="text-xl md:text-4xl font-bold">Rp 300.000</h3>
-            </div>
-            <div class="bg-white p-2 shadow-md rounded-lg h-20">
-              <p class="text-md text-gray-600">01/25/2025</p>
-              <h3 class="text-xl md:text-4xl font-bold">Rp 300.000</h3>
-            </div>
-          </div>
-        </div>
+      <div class="">
         <div class="bg-white p-6 shadow-md rounded-lg h-40 justify-center md:col-span-1 lg:col-span-1">
           <p class="text-xl text-gray-600">Saldo</p>
           <h3 class="text-3xl md:text-5xl font-bold">Rp 3.000.000.000,00</h3>
         </div>
-        <div class="bg-white p-6 shadow-md rounded-lg">Div 4</div>
       </div>
     </div>
   </body>
