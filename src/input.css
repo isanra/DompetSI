@@ -36,3 +36,25 @@ body#admin {
 .rounded-tl-5xl {
   border-top-left-radius: 70px;
 }
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.container-riwayat {
+  max-height: 550px; /* Sesuaikan tinggi sesuai kebutuhan */
+  overflow-y: auto;
+}
+.shadow-xxl {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.shadow-sdng {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.sidebar-active {
+  /* Warna hijau */
+  @apply text-emerald-600 font-bold;
+}
