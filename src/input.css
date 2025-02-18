@@ -1,4 +1,12 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+
+@layer base {
+  html {
+    font-family: "Comfortaa", Arial, sans-serif;
+  }
+}
+
 .mt-30 {
   margin-top: calc(var(--spacing) * 30);
 }
@@ -45,7 +53,19 @@ body#admin {
   scrollbar-width: none; /* Firefox */
 }
 .container-riwayat {
-  max-height: 550px; /* Sesuaikan tinggi sesuai kebutuhan */
+  max-height: 450px; /* Sesuaikan tinggi sesuai kebutuhan */
+  overflow-y: auto;
+}
+.container-riwayat-admin {
+  max-height: 350px; /* Sesuaikan tinggi sesuai kebutuhan */
+  overflow-y: auto;
+}
+.metode-pembayaran {
+  max-height: 160px; /* Sesuaikan tinggi sesuai kebutuhan */
+  overflow-y: auto;
+}
+.hero-card-santri-admin {
+  max-height: 440px; /* Sesuaikan tinggi sesuai kebutuhan */
   overflow-y: auto;
 }
 .shadow-xxl {
@@ -57,4 +77,46 @@ body#admin {
 .sidebar-active {
   /* Warna hijau */
   @apply text-emerald-600 font-bold;
+}
+/* Custom styling untuk radio button */
+.custom-radio {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #9ca3af; /* Border abu-abu saat tidak aktif */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: border 0.2s ease-in-out;
+}
+
+/* Saat radio button dipilih, border berubah jadi hijau */
+.custom-radio:checked {
+  border-color: #22c55e;
+
+  @apply border-emerald-600/* Border hijau saat aktif */;
+}
+
+/* Lapisan putih di dalam saat dipilih */
+.custom-radio:checked::before {
+  content: "";
+  width: 14px; /* Ukuran lapisan putih lebih besar */
+  height: 14px;
+  background-color: white; /* Warna putih di dalam */
+  border-radius: 50%;
+  position: absolute;
+}
+
+/* Bulatan hijau di tengah */
+.custom-radio:checked::after {
+  content: "";
+  width: 10px; /* Ukuran hijau lebih besar */
+  height: 10px;
+  background-color: #22c55e; /* Warna hijau di tengah */
+  border-radius: 50%;
+  position: absolute;
+
+  @apply bg-emerald-600;
 }

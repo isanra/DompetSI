@@ -45,27 +45,21 @@
       <div class="h-full px-3 pb-4 overflow-y-auto">
         <ul class="space-y-2 font-semibold text-xl">
           <li>
-            <a href="/dist/Parent/Profil.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <span><i class="fa-solid fa-user"></i></span>
-              <span class="ms-3">Profil</span>
+            <a href="/dist/admin/admin.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+              <span><i class="fa-solid fa-users"></i></span>
+              <span class="ms-3">santri QBS</span>
             </a>
           </li>
           <li>
-            <a href="/dist/Parent/Riwayat.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <span><i class="fa-solid fa-list-alt"></i></span>
-              <span class="flex-1 ms-3 whitespace-nowrap">Riwayat</span>
+            <a href="/dist/admin/admin.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+              <span><i class="fa-solid fa-users"></i></span>
+              <span class="ms-3">santri FQ</span>
             </a>
           </li>
           <li class="">
-            <a href="/dist/Parent/Transaksi.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+            <a href="/dist/admin/Riwayat.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
               <span><i class="fa-solid fa-money-bill-transfer"></i></span>
-              <span class="flex-1 ms-3 whitespace-nowrap">Transaksi</span>
-            </a>
-          </li>
-          <li class="mb-10">
-            <a href="" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <span><i class="fa-solid fa-phone"></i></span>
-              <span class="flex-1 ms-3 whitespace-nowrap">Hubungi Admin</span>
+              <span class="flex-1 ms-3 whitespace-nowrap">Riwayat transaksi</span>
             </a>
           </li>
 
@@ -98,29 +92,79 @@
           </div>
           <div class="bg-white p-6 shadow-md rounded-lg flex flex-col justify-center">
             <p class="text-xl text-gray-600">Saldo</p>
-            <h3 class="text-3xl md:text-5xl font-bold flex items-center">
-              Rp 3.000.000.000,00 <a href="Transaksi.html" class="ms-3"><i class="fa-solid fa-plus bg-emerald-600 text-xl p-2 rounded-full text-white shadow-md shadow-emerald-700"></i></a>
-            </h3>
+            <h3 class="text-3xl md:text-5xl font-bold flex items-center">Rp 3.000.000.000,00 <a href="Transaksi.html"></a></h3>
           </div>
         </div>
         <!-- Div Riwayat -->
         <div class="bg-white p-6 shadow-md rounded-lg md:col-span-1">
-          <h4 class="text-lg font-bold bg-emerald-600 p-3 py-1 rounded-lg text-white shadow-md shadow-emerald-600">Riwayat Pengambilan Terbaru</h4>
-          <div class="bg-emerald-600 p-2 shadow-md shadow-emerald-700 rounded-lg h-20 mt-2">
-            <p class="text-md text-gray-300">01/25/2025</p>
-            <h3 class="text-xl md:text-4xl font-bold text-white">Rp 300.000</h3>
-          </div>
-          <div class="bg-emerald-600 p-2 shadow-md shadow-emerald-700 rounded-lg h-20 mt-2">
-            <p class="text-md text-gray-300">01/25/2025</p>
-            <h3 class="text-xl md:text-4xl font-bold text-white">Rp 300.000</h3>
-          </div>
-          <div class="bg-emerald-600 p-2 shadow-md shadow-emerald-700 rounded-lg h-20 mt-2">
-            <p class="text-md text-gray-300">01/25/2025</p>
-            <h3 class="text-xl md:text-4xl font-bold text-white">Rp 300.000</h3>
-          </div>
+          <h4 class="text-lg font-bold bg-emerald-600 p-3 py-1 rounded-lg text-white shadow-md shadow-emerald-600">Form Pengajuan Duit</h4>
+          <form class="mt-4">
+            <div class="mb-4">
+              <label for="tanggal" class="block text-gray-700">Tanggal Pengajuan</label>
+              <input type="date" id="tanggal" class="mt-1 p-2 border border-gray-300 focus:ring-1 focus:ring-emerald-600 active:ring-1 active:ring-emerald-600 rounded-lg w-full appearance-none outline-none" required />
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700">Jumlah Uang</label>
+
+              <div class="mt-2 flex gap-2">
+                <button
+                  type="button"
+                  class="nominal px-3 py-2 bg-Gray-200 border border-emerald-600 text-emerald-600 rounded-lg transition-all duration-200 active:bg-emerald-600 active:text-white focus:text-white focus:bg-emerald-600"
+                  onclick="selectAmount(50000, this)"
+                >
+                  50K
+                </button>
+                <button
+                  type="button"
+                  class="nominal px-3 py-2 bg-Gray-200 border border-emerald-600 text-emerald-600 rounded-lg transition-all duration-200 active:bg-emerald-600 active:text-white focus:text-white focus:bg-emerald-600"
+                  onclick="selectAmount(100000, this)"
+                >
+                  100K
+                </button>
+                <button
+                  type="button"
+                  class="nominal px-3 py-2 bg-Gray-200 border border-emerald-600 text-emerald-600 rounded-lg transition-all duration-200 active:bg-emerald-600 active:text-white focus:text-white focus:bg-emerald-600"
+                  onclick="selectAmount(150000, this)"
+                >
+                  150K
+                </button>
+                <button
+                  type="button"
+                  class="nominal px-3 py-2 bg-Gray-200 border border-emerald-600 text-emerald-600 rounded-lg transition-all duration-200 active:bg-emerald-600 active:text-white focus:text-white focus:bg-emerald-600"
+                  onclick="selectAmount(200000, this)"
+                >
+                  200K
+                </button>
+              </div>
+
+              <div class="mt-2">
+                <input
+                  type="number"
+                  id="jumlahLainnya"
+                  name="jumlahLainnya"
+                  class="mt-1 p-2 border border-gray-300 focus:ring-1 focus:ring-emerald-600 active:ring-1 active:ring-emerald-600 rounded-lg w-full appearance-none outline-none"
+                  placeholder="lainya..."
+                />
+              </div>
+
+              <input type="hidden" id="jumlah" name="jumlah" required />
+            </div>
+
+            <div class="mb-4">
+              <label for="Keterangan" class="block text-gray-700">Keterangan Pengajuan</label>
+              <textarea
+                id="Keterangan"
+                class="mt-1 p-2 border border-gray-300 focus:ring-1 focus:ring-emerald-600 active:ring-1 active:ring-emerald-600 rounded-lg w-full appearance-none outline-none"
+                rows="3"
+                placeholder="Masukkan Keterangan pengajuan"
+              ></textarea>
+            </div>
+            <button type="submit" class="bg-emerald-600 text-white p-2 rounded-lg">Ajukan</button>
+          </form>
         </div>
       </div>
     </div>
   </body>
   <script src="/assets/js/parent.js"></script>
+  <script src="/assets/js/admin.js"></script>
 </html>

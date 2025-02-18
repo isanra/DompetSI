@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="/src/output.css" rel="stylesheet" />
+  </head>
+
+  <body class="bg-gray-100 md:overflow-hidden">
+    <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-b-4xl">
+      <div class="px-3 py-3 lg:px-5 lg:pl-3">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center justify-start rtl:justify-end">
+            <button
+              data-drawer-target="logo-sidebar"
+              data-drawer-toggle="logo-sidebar"
+              aria-controls="logo-sidebar"
+              type="button"
+              class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            >
+              <span class="sr-only">Open sidebar</span>
+              <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                  d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+                ></path>
+              </svg>
+            </button>
+            <a href="" class="flex ms-2 md:me-24">
+              <img src="/assets/img/logo.png" class="h-10 me-3" alt="FlowBite Logo" />
+              <span class="self-center text-2xl font-bold sm:text-3xl whitespace-nowrap dark:text-white">Dompet<span class="text-emerald-600">SI</span> </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <aside
+      id="logo-sidebar"
+      class="fixed top-0 left-0 z-40 w-64 md:mt-25 rounded-tr-5xl h-screen pt-20 md:pt-5 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700 shadow-2xl"
+      aria-label="Sidebar"
+    >
+      <div class="h-full px-3 pb-4 overflow-y-auto">
+        <ul class="space-y-2 font-semibold text-xl">
+          <li>
+            <a href="/dist/admin/admin.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+              <span><i class="fa-solid fa-users"></i></span>
+              <span class="ms-3">santri QBS</span>
+            </a>
+          </li>
+          <li>
+            <a href="/dist/admin/admin.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+              <span><i class="fa-solid fa-users"></i></span>
+              <span class="ms-3">santri FQ</span>
+            </a>
+          </li>
+          <li class="">
+            <a href="/dist/admin/Riwayat.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+              <span><i class="fa-solid fa-money-bill-transfer"></i></span>
+              <span class="flex-1 ms-3 whitespace-nowrap">Riwayat transaksi</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="/dist/Masuk.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+              <svg class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3" />
+              </svg>
+              <span class="flex-1 ms-3 whitespace-nowrap">Keluar</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="flex-1 p-6 sm:ml-64 mt-20">
+      <div class="">
+        <div class="bg-white p-6 shadow-md shadow-gray-300 rounded-tl-5xl rounded-lg">
+          <div class="grid grid-cols-1 gap-2">
+            <h4 class="text-3xl pt-5 text-gray-600 ps-4 font-bold mb-10">Riwayat Transaksi</h4>
+            <div class="flex flex-col h-screen p-4">
+              <!-- Header Pilihan Tanggal -->
+              <div class="flex justify-between items-center bg-gray-100 py-3 px-6 text-gray-700 font-bold text-lg rounded-lg shadow-md">
+                <span>Riwayat Transaksi</span>
+                <!-- Dropdown Pilih Tanggal -->
+                <select id="dateSelect" class="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                  <option value="25-03-2024">25 Maret 2024</option>
+                  <option value="24-03-2024">24 Maret 2024</option>
+                  <option value="23-03-2024">23 Maret 2024</option>
+                </select>
+              </div>
+
+              <!-- Container Riwayat -->
+              <div class="container-riwayat-admin flex-grow overflow-auto scrollbar-hide p-4">
+                <div class="grid grid-cols-1 gap-4">
+                  <!-- ITEM TEMPLATE -->
+                  <div class="flex items-center justify-between bg-white shadow-md p-4 rounded-lg">
+                    <div class="flex items-center">
+                      <div class="text-emerald-600">
+                        <i class="fa-solid fa-download text-4xl"></i>
+                      </div>
+                      <div class="ml-3">
+                        <h3 class="text-xl font-bold text-gray-800">Ahmad Zaki</h3>
+                        <p class="text-sm text-gray-500">Kelas: XI IPA</p>
+                        <p class="text-xs text-gray-400">25 Maret 2024 | 14:10:01</p>
+                      </div>
+                    </div>
+                    <div class="text-gray-600 font-semibold text-lg">Pemasukan Saldo</div>
+                    <div class="text-emerald-600 font-bold text-2xl">+Rp. 200.000</div>
+                  </div>
+
+                  <div class="flex items-center justify-between bg-white shadow-md p-4 rounded-lg">
+                    <div class="flex items-center">
+                      <div class="text-rose-600">
+                        <i class="fa-solid fa-upload text-4xl"></i>
+                      </div>
+                      <div class="ml-3">
+                        <h3 class="text-xl font-bold text-gray-800">Siti Aisyah</h3>
+                        <p class="text-sm text-gray-500">Kelas: XI IPA</p>
+                        <p class="text-xs text-gray-400">25 Maret 2024 | 14:45:30</p>
+                      </div>
+                    </div>
+                    <div class="text-gray-600 font-semibold text-lg">Penarikan Saldo</div>
+                    <div class="text-rose-600 font-bold text-2xl">-Rp. 150.000</div>
+                  </div>
+                  <div class="flex items-center justify-between bg-white shadow-md p-4 rounded-lg">
+                    <div class="flex items-center">
+                      <div class="text-emerald-600">
+                        <i class="fa-solid fa-download text-4xl"></i>
+                      </div>
+                      <div class="ml-3">
+                        <h3 class="text-xl font-bold text-gray-800">Ahmad Zaki</h3>
+                        <p class="text-sm text-gray-500">Kelas: XI IPA</p>
+                        <p class="text-xs text-gray-400">25 Maret 2024 | 14:10:01</p>
+                      </div>
+                    </div>
+                    <div class="text-gray-600 font-semibold text-lg">Pemasukan Saldo</div>
+                    <div class="text-emerald-600 font-bold text-2xl">+Rp. 200.000</div>
+                  </div>
+
+                  <div class="flex items-center justify-between bg-white shadow-md p-4 rounded-lg">
+                    <div class="flex items-center">
+                      <div class="text-rose-600">
+                        <i class="fa-solid fa-upload text-4xl"></i>
+                      </div>
+                      <div class="ml-3">
+                        <h3 class="text-xl font-bold text-gray-800">Siti Aisyah</h3>
+                        <p class="text-sm text-gray-500">Kelas: XI IPA</p>
+                        <p class="text-xs text-gray-400">25 Maret 2024 | 14:45:30</p>
+                      </div>
+                    </div>
+                    <div class="text-gray-600 font-semibold text-lg">Penarikan Saldo</div>
+                    <div class="text-rose-600 font-bold text-2xl">-Rp. 150.000</div>
+                  </div>
+                  <div class="flex items-center justify-between bg-white shadow-md p-4 rounded-lg">
+                    <div class="flex items-center">
+                      <div class="text-emerald-600">
+                        <i class="fa-solid fa-download text-4xl"></i>
+                      </div>
+                      <div class="ml-3">
+                        <h3 class="text-xl font-bold text-gray-800">Ahmad Zaki</h3>
+                        <p class="text-sm text-gray-500">Kelas: XI IPA</p>
+                        <p class="text-xs text-gray-400">25 Maret 2024 | 14:10:01</p>
+                      </div>
+                    </div>
+                    <div class="text-gray-600 font-semibold text-lg">Pemasukan Saldo</div>
+                    <div class="text-emerald-600 font-bold text-2xl">+Rp. 200.000</div>
+                  </div>
+
+                  <div class="flex items-center justify-between bg-white shadow-md p-4 rounded-lg">
+                    <div class="flex items-center">
+                      <div class="text-rose-600">
+                        <i class="fa-solid fa-upload text-4xl"></i>
+                      </div>
+                      <div class="ml-3">
+                        <h3 class="text-xl font-bold text-gray-800">Siti Aisyah</h3>
+                        <p class="text-sm text-gray-500">Kelas: XI IPA</p>
+                        <p class="text-xs text-gray-400">25 Maret 2024 | 14:45:30</p>
+                      </div>
+                    </div>
+                    <div class="text-gray-600 font-semibold text-lg">Penarikan Saldo</div>
+                    <div class="text-rose-600 font-bold text-2xl">-Rp. 150.000</div>
+                  </div>
+                  <div class="flex items-center justify-between bg-white shadow-md p-4 rounded-lg">
+                    <div class="flex items-center">
+                      <div class="text-emerald-600">
+                        <i class="fa-solid fa-download text-4xl"></i>
+                      </div>
+                      <div class="ml-3">
+                        <h3 class="text-xl font-bold text-gray-800">Ahmad Zaki</h3>
+                        <p class="text-sm text-gray-500">Kelas: XI IPA</p>
+                        <p class="text-xs text-gray-400">25 Maret 2024 | 14:10:01</p>
+                      </div>
+                    </div>
+                    <div class="text-gray-600 font-semibold text-lg">Pemasukan Saldo</div>
+                    <div class="text-emerald-600 font-bold text-2xl">+Rp. 200.000</div>
+                  </div>
+
+                  <div class="flex items-center justify-between bg-white shadow-md p-4 rounded-lg">
+                    <div class="flex items-center">
+                      <div class="text-rose-600">
+                        <i class="fa-solid fa-upload text-4xl"></i>
+                      </div>
+                      <div class="ml-3">
+                        <h3 class="text-xl font-bold text-gray-800">Siti Aisyah</h3>
+                        <p class="text-sm text-gray-500">Kelas: XI IPA</p>
+                        <p class="text-xs text-gray-400">25 Maret 2024 | 14:45:30</p>
+                      </div>
+                    </div>
+                    <div class="text-gray-600 font-semibold text-lg">Penarikan Saldo</div>
+                    <div class="text-rose-600 font-bold text-2xl">-Rp. 250.000</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/assets/js/parent.js"></script>
+</html>

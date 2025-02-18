@@ -30,7 +30,7 @@
             </button>
             <a href="" class="flex ms-2 md:me-24">
               <img src="/assets/img/logo.png" class="h-10 me-3" alt="FlowBite Logo" />
-              <span class="self-center text-2xl font-bold sm:text-2xl whitespace-nowrap dark:text-white">DompetSI</span>
+              <span class="self-center text-2xl font-bold sm:text-3xl whitespace-nowrap dark:text-white">Dompet<span class="text-emerald-600">SI</span> </span>
             </a>
           </div>
         </div>
@@ -45,25 +45,25 @@
       <div class="h-full px-3 pb-4 overflow-y-auto">
         <ul class="space-y-2 font-semibold text-xl">
           <li>
-            <a href="Profil.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+            <a href="/dist/Parent/Profil.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
               <span><i class="fa-solid fa-user"></i></span>
               <span class="ms-3">Profil</span>
             </a>
           </li>
           <li>
-            <a href="Riwayat.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+            <a href="/dist/Parent/Riwayat.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
               <span><i class="fa-solid fa-list-alt"></i></span>
               <span class="flex-1 ms-3 whitespace-nowrap">Riwayat</span>
             </a>
           </li>
           <li class="">
-            <a href="Transaksi.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+            <a href="/dist/Parent/Transaksi.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
               <span><i class="fa-solid fa-money-bill-transfer"></i></span>
               <span class="flex-1 ms-3 whitespace-nowrap">Transaksi</span>
             </a>
           </li>
           <li class="mb-10">
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+            <a href="" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
               <span><i class="fa-solid fa-phone"></i></span>
               <span class="flex-1 ms-3 whitespace-nowrap">Hubungi Admin</span>
             </a>
@@ -82,10 +82,85 @@
     </aside>
 
     <div class="flex-1 p-6 sm:ml-64 mt-20">
-      <div class="">
-        <div class="bg-white p-6 shadow-md rounded-lg h-40 justify-center md:col-span-1 lg:col-span-1">
-          <p class="text-xl text-gray-600">Saldo</p>
-          <h3 class="text-3xl md:text-5xl font-bold">Rp 3.000.000.000,00</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Form Pengisian Saldo -->
+        <div class="bg-white p-6 ps-8 shadow-md rounded-lg rounded-tl-5xl md:h-70">
+          <h2 class="text-2xl font-bold mb-4">Isi Saldo</h2>
+          <form>
+            <div class="mb-4">
+              <label class="block text-gray-700 font-semibold mb-2">Nominal</label>
+              <input type="text" placeholder="Masukkan nominal" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700 font-semibold mb-2">Tanggal</label>
+              <input type="date" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+          </form>
+        </div>
+
+        <!-- Metode Pembayaran dan Ringkasan Transaksi -->
+        <div class="bg-white p-6 shadow-md rounded-lg">
+          <h2 class="text-2xl font-bold mb-4">Metode Pembayaran</h2>
+          <div class="space-y-3 metode-pembayaran flex-grow overflow-auto scrollbar-hide">
+            <label class="flex justify-between items-center p-3 rounded-lg cursor-pointer hover:bg-gray-100">
+              <div class="flex items-center">
+                <img src="/assets/img/bsi.png" alt="BSI" class="w-6 h-6 mr-2" />
+                <span class="font-medium">Bank Syariah Indonesia</span>
+              </div>
+              <input type="radio" name="payment" value="BSI" class="custom-radio" />
+            </label>
+
+            <label class="flex justify-between items-center p-3 rounded-lg cursor-pointer hover:bg-gray-100">
+              <div>
+                <div class="flex items-center">
+                  <img src="/assets/img/bca.png" alt="BCA" class="w-6 h-6 mr-2" />
+                  <span class="font-medium">BCA Virtual Account</span>
+                </div>
+              </div>
+              <input type="radio" name="payment" value="bca_va" class="custom-radio" />
+            </label>
+            <label class="flex justify-between items-center p-3 rounded-lg cursor-pointer hover:bg-gray-100">
+              <div>
+                <div class="flex items-center">
+                  <img src="/assets/img/mandiri.png" alt="mandiri" class="w-6 h-6 mr-2" />
+                  <span class="font-medium">Mandiri Virtual Account</span>
+                </div>
+              </div>
+              <input type="radio" name="payment" value="mandiri" class="custom-radio" />
+            </label>
+            <label class="flex justify-between items-center p-3 rounded-lg cursor-pointer hover:bg-gray-100">
+              <div>
+                <div class="flex items-center">
+                  <img src="/assets/img/bni.png" alt="BNI" class="w-6 h-6 mr-2" />
+                  <span class="font-medium">BNI Virtual Account</span>
+                </div>
+              </div>
+              <input type="radio" name="payment" value="bni_va" class="custom-radio" />
+            </label>
+            <label class="flex justify-between items-center p-3 rounded-lg cursor-pointer hover:bg-gray-100">
+              <div>
+                <div class="flex items-center">
+                  <img src="/assets/img/briva.png" alt="BRI" class="w-6 h-6 mr-2" />
+                  <span class="font-medium">BRI Virtual Account</span>
+                </div>
+              </div>
+              <input type="radio" name="payment" value="bri_va" class="custom-radio" />
+            </label>
+          </div>
+
+          <!-- Ringkasan Transaksi -->
+          <div class="mt-6 p-4 bg-gray-50 rounded-lg">
+            <h3 class="text-lg font-semibold">Ringkasan transaksi</h3>
+            <div class="text-gray-700 mt-2 space-y-2">
+              <p>Saldo yang ingin diisi: <span id="saldo" class="font-medium">Rp100.000</span></p>
+              <p>Pajak: <span id="pajak" class="font-medium">Rp2.000</span></p>
+            </div>
+            <hr class="my-4" />
+            <p class="text-lg font-bold">Total Tagihan: <span id="total" class="text-emerald-600">Rp102.000</span></p>
+          </div>
+
+          <!-- Tombol Pembayaran -->
+          <button class="w-full bg-emerald-500 text-white p-3 mt-4 rounded-lg text-lg font-semibold hover:bg-emerald-600">Bayar Sekarang</button>
         </div>
       </div>
     </div>
