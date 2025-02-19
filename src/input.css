@@ -76,7 +76,7 @@ body#admin {
 }
 .sidebar-active {
   /* Warna hijau */
-  @apply text-emerald-600 font-bold;
+  @apply text-amber-600 font-bold;
 }
 /* Custom styling untuk radio button */
 .custom-radio {
@@ -96,7 +96,7 @@ body#admin {
 .custom-radio:checked {
   border-color: #22c55e;
 
-  @apply border-emerald-600/* Border hijau saat aktif */;
+  @apply border-amber-600/* Border hijau saat aktif */;
 }
 
 /* Lapisan putih di dalam saat dipilih */
@@ -118,5 +118,5 @@ body#admin {
   border-radius: 50%;
   position: absolute;
 
-  @apply bg-emerald-600;
+  @apply bg-amber-600;
 }

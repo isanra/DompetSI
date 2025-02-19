@@ -83,41 +83,41 @@
 
     <div class="flex-1 p-6 sm:ml-64 mt-20">
       <div class="">
-        <div class="bg-white p-6 shadow-md shadow-gray-300 rounded-tl-5xl rounded-lg">
+        <div class="md:bg-white md:p-6 md:shadow-md md:shadow-gray-300 rounded-tl-5xl rounded-lg">
           <div class="grid grid-cols-1 gap-2">
-            <h4 class="text-3xl pt-5 text-gray-600 ps-4 font-bold mb-10">Riwayat Transaksi</h4>
+            <h4 class="text-lg md:text-3xl pt-5 text-gray-600 ps-4 font-bold mb-5 md:mb-10">Riwayat Transaksi</h4>
             <div class="flex flex-col h-screen">
               <div class="container-riwayat flex-grow overflow-auto scrollbar-hide">
-                <div class="py-3 px-6 h-23 mb-2 bg-white shadow-md rounded-lg"">
-                  <div class="flex justify-between items-center">
-                    <div class="flex items-center">
-                      <div class="text-emerald-600">
-                        <i class="fa-solid fa-download text-4xl"></i>
-                      </div>
-                      <div class="ml-3">
-                        <h3 class="text-3xl font-bold text-emerald-600">Pemasukan saldo</h3>
-                        <p class="text-sm text-gray-500">25/03/2024 14:10:01</p>
-                      </div>
-                    </div>
-                    <h3 class="text-3xl font-bold text-emerald-600">+Rp. 200.000</h3>
+                <!-- Transaksi 1 -->
+                <div class="flex items-center bg-white shadow-md md:shadow-lg rounded-lg px-4 pb-2 md:p-4 mb-3">
+                  <div class="md:w-12 w-15 h-15 md:h-12 flex items-center justify-center rounded-full bg-emerald-100 md:bg-emerald-600">
+                    <i class="fa-solid fa-download text-emerald-600 md:text-white text-2xl"></i>
                   </div>
+                  <div class="flex-1 ml-3 mt-5 md:mt-0">
+                    <h3 class="text-lg md:text-2xl font-bold text-gray-800">Pemasukan saldo</h3>
+                    <h3 class="text-md font-semibold text-emerald-600 mb-2 md:hidden">+IDR 200.000</h3>
+                    <!-- Ditampilkan hanya di HP -->
+                    <p class="text-sm text-gray-500">25/03/2024 • 14:10</p>
+                  </div>
+                  <h3 class="hidden md:block text-md md:text-2xl font-semibold md:font-bold text-emerald-600">+IDR 200.000</h3>
+                  <!-- Ditampilkan hanya di desktop -->
                 </div>
 
-                <div class="py-3 px-6 h-23 mb-2 bg-white shadow-md rounded-lg">
-                  <div class="flex justify-between items-center">
-                    <div class="flex items-center">
-                      <div class="text-rose-600">
-                        <i class="fa-solid fa-upload text-4xl"></i>
-                      </div>
-                      <div class="ml-3">
-                        <h3 class="text-3xl font-bold text-rose-600">Penarikan saldo</h3>
-                        <p class="text-sm text-gray-500">25/03/2024 14:10:01</p>
-                      </div>
-                    </div>
-                    <h3 class="text-3xl font-bold text-rose-600">-Rp. 200.000</h3>
+                <!-- Transaksi 2 -->
+
+                <div class="flex items-center bg-white shadow-md md:shadow-lg rounded-lg px-4 pb-2 md:p-4 mb-3">
+                  <div class="md:w-12 w-15 h-15 md:h-12 flex items-center justify-center rounded-full bg-amber-100 md:bg-amber-600">
+                    <i class="fa-solid fa-upload text-amber-600 md:text-white text-2xl"></i>
                   </div>
+                  <div class="flex-1 ml-3 mt-5 md:mt-0">
+                    <h3 class="text-lg md:text-2xl font-bold text-gray-800">Penarikan saldo</h3>
+                    <h3 class="text-md font-semibold text-amber-600 mb-2 md:hidden">-IDR 200.000</h3>
+                    <!-- Ditampilkan hanya di HP -->
+                    <p class="text-sm text-gray-500">25/03/2024 • 14:10</p>
+                  </div>
+                  <h3 class="hidden md:block text-md md:text-2xl font-semibold md:font-bold text-amber-600">+IDR 200.000</h3>
+                  <!-- Ditampilkan hanya di desktop -->
                 </div>
-                
               </div>
             </div>
           </div>
