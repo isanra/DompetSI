@@ -30,7 +30,7 @@
             </button>
             <a href="" class="flex ms-2 md:me-24">
               <img src="/assets/img/logo.png" class="h-10 me-3" alt="FlowBite Logo" />
-              <span class="self-center text-2xl font-bold sm:text-3xl whitespace-nowrap dark:text-white">Dompet<span class="text-emerald-600">SI</span> </span>
+              <span class="self-center text-2xl font-bold sm:text-3xl whitespace-nowrap dark:text-white">Dompet<span class="text-amber-600">SI</span> </span>
             </a>
           </div>
         </div>
@@ -45,13 +45,13 @@
       <div class="h-full px-3 pb-4 overflow-y-auto">
         <ul class="space-y-2 font-semibold text-xl">
           <li>
-            <a href="/dist/admin/admin.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+            <a href="/dist/admin/QBS.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
               <span><i class="fa-solid fa-users"></i></span>
               <span class="ms-3">santri QBS</span>
             </a>
           </li>
           <li>
-            <a href="/dist/admin/admin.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+            <a href="/dist/admin/FQ.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
               <span><i class="fa-solid fa-users"></i></span>
               <span class="ms-3">santri FQ</span>
             </a>
@@ -79,7 +79,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20">
         <!-- Div Profil + Saldo -->
         <div class="md:col-span-2 flex flex-col gap-6">
-          <div class="bg-white p-6 shadow-md rounded-lg rounded-tl-5xl flex items-center">
+          <div class="md:bg-white p-6 md:shadow-md rounded-lg rounded-tl-5xl flex items-center h-30 md:h-auto">
             <img
               src="https://media.licdn.com/dms/image/v2/D4D03AQG57T_BHT0xOw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684638937145?e=1745452800&v=beta&t=5PXD2EZKgLokn6jBu8FjwekhUboSg5tRNNYc_uf7zEQ"
               alt="Foto Orang"
@@ -90,47 +90,45 @@
               <p class="text-sm md:text-xl text-gray-600">Kelas 2 Pondok / 3 SMA</p>
             </div>
           </div>
-          <div class="bg-white p-6 shadow-md rounded-lg flex flex-col justify-center">
-            <p class="text-xl text-gray-600">Saldo</p>
-            <h3 class="text-3xl md:text-5xl font-bold flex items-center">Rp 3.000.000.000,00 <a href="Transaksi.html"></a></h3>
+          <div class="bg-amber-600 p-6 shadow-md shadow-amber-700 rounded-lg flex flex-col justify-center">
+            <p class="text-xl text-gray-200 p-0">Saldo</p>
+            <h3 class="text-3xl md:text-5xl font-bold flex items-center text-white">
+              IDR 25.000.000 <a href="Transaksi.html" class="ms-3"><i class="fa-solid fa-plus bg-white text-sm md:text-xl p-2 mb-2 md:mb-3 rounded-full text-amber-600 shadow-sm shadow-white"></i></a>
+            </h3>
           </div>
         </div>
         <!-- Div Riwayat -->
-        <div class="bg-white p-6 shadow-md rounded-lg md:col-span-1">
-          <h4 class="text-lg font-bold bg-emerald-600 p-3 py-1 rounded-lg text-white shadow-md shadow-emerald-600">Form Pengajuan Duit</h4>
+        <div class="md:bg-white md:p-6 md:shadow-md rounded-lg md:col-span-1">
+          <h4 class="text-lg font-bold bg-amber-600 p-3 py-1 rounded-lg text-white shadow-md shadow-amber-600">Pengajuan Pengambilan Duit</h4>
           <form class="mt-4">
-            <div class="mb-4">
-              <label for="tanggal" class="block text-gray-700">Tanggal Pengajuan</label>
-              <input type="date" id="tanggal" class="mt-1 p-2 border border-gray-300 focus:ring-1 focus:ring-emerald-600 active:ring-1 active:ring-emerald-600 rounded-lg w-full appearance-none outline-none" required />
-            </div>
             <div class="mb-4">
               <label class="block text-gray-700">Jumlah Uang</label>
 
               <div class="mt-2 flex gap-2">
                 <button
                   type="button"
-                  class="nominal px-3 py-2 bg-Gray-200 border border-emerald-600 text-emerald-600 rounded-lg transition-all duration-200 active:bg-emerald-600 active:text-white focus:text-white focus:bg-emerald-600"
+                  class="nominal px-3 py-2 bg-Gray-200 border border-amber-600 text-amber-600 rounded-lg transition-all duration-200 active:bg-amber-600 active:text-white focus:text-white focus:bg-amber-600"
                   onclick="selectAmount(50000, this)"
                 >
                   50K
                 </button>
                 <button
                   type="button"
-                  class="nominal px-3 py-2 bg-Gray-200 border border-emerald-600 text-emerald-600 rounded-lg transition-all duration-200 active:bg-emerald-600 active:text-white focus:text-white focus:bg-emerald-600"
+                  class="nominal px-3 py-2 bg-Gray-200 border border-amber-600 text-amber-600 rounded-lg transition-all duration-200 active:bg-amber-600 active:text-white focus:text-white focus:bg-amber-600"
                   onclick="selectAmount(100000, this)"
                 >
                   100K
                 </button>
                 <button
                   type="button"
-                  class="nominal px-3 py-2 bg-Gray-200 border border-emerald-600 text-emerald-600 rounded-lg transition-all duration-200 active:bg-emerald-600 active:text-white focus:text-white focus:bg-emerald-600"
+                  class="nominal px-3 py-2 bg-Gray-200 border border-amber-600 text-amber-600 rounded-lg transition-all duration-200 active:bg-amber-600 active:text-white focus:text-white focus:bg-amber-600"
                   onclick="selectAmount(150000, this)"
                 >
                   150K
                 </button>
                 <button
                   type="button"
-                  class="nominal px-3 py-2 bg-Gray-200 border border-emerald-600 text-emerald-600 rounded-lg transition-all duration-200 active:bg-emerald-600 active:text-white focus:text-white focus:bg-emerald-600"
+                  class="nominal px-3 py-2 bg-Gray-200 border border-amber-600 text-amber-600 rounded-lg transition-all duration-200 active:bg-amber-600 active:text-white focus:text-white focus:bg-amber-600"
                   onclick="selectAmount(200000, this)"
                 >
                   200K
@@ -142,7 +140,7 @@
                   type="number"
                   id="jumlahLainnya"
                   name="jumlahLainnya"
-                  class="mt-1 p-2 border border-gray-300 focus:ring-1 focus:ring-emerald-600 active:ring-1 active:ring-emerald-600 rounded-lg w-full appearance-none outline-none"
+                  class="mt-1 p-2 border border-gray-300 focus:ring-1 focus:ring-amber-600 active:ring-1 active:ring-amber-600 rounded-lg w-full appearance-none outline-none"
                   placeholder="lainya..."
                 />
               </div>
@@ -154,12 +152,12 @@
               <label for="Keterangan" class="block text-gray-700">Keterangan Pengajuan</label>
               <textarea
                 id="Keterangan"
-                class="mt-1 p-2 border border-gray-300 focus:ring-1 focus:ring-emerald-600 active:ring-1 active:ring-emerald-600 rounded-lg w-full appearance-none outline-none"
+                class="mt-1 p-2 border border-gray-300 focus:ring-1 focus:ring-amber-600 active:ring-1 active:ring-amber-600 rounded-lg w-full appearance-none outline-none"
                 rows="3"
                 placeholder="Masukkan Keterangan pengajuan"
               ></textarea>
             </div>
-            <button type="submit" class="bg-emerald-600 text-white p-2 rounded-lg">Ajukan</button>
+            <button type="submit" class="bg-amber-600 text-white p-2 rounded-lg w-full">Ajukan</button>
           </form>
         </div>
       </div>

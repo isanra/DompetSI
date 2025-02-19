@@ -45,13 +45,13 @@
       <div class="h-full px-3 pb-4 overflow-y-auto">
         <ul class="space-y-2 font-semibold text-xl">
           <li>
-            <a href="/dist/admin/admin.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+            <a href="/dist/admin/QBS.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
               <span><i class="fa-solid fa-users"></i></span>
               <span class="ms-3">santri QBS</span>
             </a>
           </li>
           <li>
-            <a href="/dist/admin/admin.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+            <a href="/dist/admin/FQ.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
               <span><i class="fa-solid fa-users"></i></span>
               <span class="ms-3">santri FQ</span>
             </a>
@@ -77,141 +77,60 @@
 
     <div class="flex-1 p-6 sm:ml-64 mt-20">
       <div class="">
-        <div class="bg-white p-6 shadow-md shadow-gray-300 rounded-tl-5xl rounded-lg">
+        <div class="md:bg-white md:p-6 md:shadow-md shadow-gray-300 rounded-tl-5xl rounded-lg">
           <div class="grid grid-cols-1 gap-2">
-            <h4 class="text-3xl pt-5 text-gray-600 ps-4 font-bold mb-10">Riwayat Transaksi</h4>
-            <div class="flex flex-col h-screen p-4">
+            <h4 class="text-3xl pt-5 text-gray-600 md:ps-4 font-bold mb-10">Riwayat Transaksi</h4>
+            <div class="flex flex-col h-screen md:p-4">
               <!-- Header Pilihan Tanggal -->
-              <div class="flex justify-between items-center bg-gray-100 py-3 px-6 text-gray-700 font-bold text-lg rounded-lg shadow-md">
-                <span>Riwayat Transaksi</span>
-                <!-- Dropdown Pilih Tanggal -->
-                <select id="dateSelect" class="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                  <option value="25-03-2024">25 Maret 2024</option>
-                  <option value="24-03-2024">24 Maret 2024</option>
-                  <option value="23-03-2024">23 Maret 2024</option>
-                </select>
+              <div class="flex flex-col md:flex-row justify-between items-start md:items-center bg-gray-100 md:py-3 md:px-6 p-3 text-gray-700 font-bold text-lg rounded-lg shadow-md mb-10">
+                <span>Riwayat Transaksi </span>
+                <!-- Input Pilih Tanggal -->
+                <input type="date" id="dateInput" class="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 mt-2 md:mt-0 w-full md:w-auto" />
               </div>
 
               <!-- Container Riwayat -->
-              <div class="container-riwayat-admin flex-grow overflow-auto scrollbar-hide p-4">
-                <div class="grid grid-cols-1 gap-4">
-                  <!-- ITEM TEMPLATE -->
-                  <div class="flex items-center justify-between bg-white shadow-md p-4 rounded-lg">
-                    <div class="flex items-center">
-                      <div class="text-emerald-600">
-                        <i class="fa-solid fa-download text-4xl"></i>
-                      </div>
-                      <div class="ml-3">
-                        <h3 class="text-xl font-bold text-gray-800">Ahmad Zaki</h3>
-                        <p class="text-sm text-gray-500">Kelas: XI IPA</p>
-                        <p class="text-xs text-gray-400">25 Maret 2024 | 14:10:01</p>
-                      </div>
-                    </div>
-                    <div class="text-gray-600 font-semibold text-lg">Pemasukan Saldo</div>
-                    <div class="text-emerald-600 font-bold text-2xl">+Rp. 200.000</div>
+              <div class="relative flex md:flex-row flex-col items-start md:items-center justify-between bg-white shadow-md md:p-4 p-3 rounded-lg mb-5">
+                <div class="flex items-center w-full md:w-auto">
+                  <!-- Icon tetap di kiri -->
+                  <div class="md:w-12 w-15 h-15 md:h-12 flex items-center justify-center rounded-full bg-emerald-100 md:bg-emerald-600">
+                    <i class="fa-solid fa-download text-emerald-600 md:text-white text-2xl"></i>
                   </div>
+                  <div class="ml-3">
+                    <h3 class="text-lg md:text-xl font-bold text-gray-800">Muhammad Ikhlas</h3>
+                    <p class="text-sm text-gray-500">Kelas: XI IPA</p>
+                    <p class="text-xs text-gray-400">25 Maret 2024 | 14:10:01</p>
+                  </div>
+                </div>
 
-                  <div class="flex items-center justify-between bg-white shadow-md p-4 rounded-lg">
-                    <div class="flex items-center">
-                      <div class="text-rose-600">
-                        <i class="fa-solid fa-upload text-4xl"></i>
-                      </div>
-                      <div class="ml-3">
-                        <h3 class="text-xl font-bold text-gray-800">Siti Aisyah</h3>
-                        <p class="text-sm text-gray-500">Kelas: XI IPA</p>
-                        <p class="text-xs text-gray-400">25 Maret 2024 | 14:45:30</p>
-                      </div>
-                    </div>
-                    <div class="text-gray-600 font-semibold text-lg">Penarikan Saldo</div>
-                    <div class="text-rose-600 font-bold text-2xl">-Rp. 150.000</div>
-                  </div>
-                  <div class="flex items-center justify-between bg-white shadow-md p-4 rounded-lg">
-                    <div class="flex items-center">
-                      <div class="text-emerald-600">
-                        <i class="fa-solid fa-download text-4xl"></i>
-                      </div>
-                      <div class="ml-3">
-                        <h3 class="text-xl font-bold text-gray-800">Ahmad Zaki</h3>
-                        <p class="text-sm text-gray-500">Kelas: XI IPA</p>
-                        <p class="text-xs text-gray-400">25 Maret 2024 | 14:10:01</p>
-                      </div>
-                    </div>
-                    <div class="text-gray-600 font-semibold text-lg">Pemasukan Saldo</div>
-                    <div class="text-emerald-600 font-bold text-2xl">+Rp. 200.000</div>
-                  </div>
+                <!-- Wrapper untuk teks tengah di desktop -->
+                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 text-gray-600 font-semibold text-xl">Pemasukan Saldo</div>
 
-                  <div class="flex items-center justify-between bg-white shadow-md p-4 rounded-lg">
-                    <div class="flex items-center">
-                      <div class="text-rose-600">
-                        <i class="fa-solid fa-upload text-4xl"></i>
-                      </div>
-                      <div class="ml-3">
-                        <h3 class="text-xl font-bold text-gray-800">Siti Aisyah</h3>
-                        <p class="text-sm text-gray-500">Kelas: XI IPA</p>
-                        <p class="text-xs text-gray-400">25 Maret 2024 | 14:45:30</p>
-                      </div>
-                    </div>
-                    <div class="text-gray-600 font-semibold text-lg">Penarikan Saldo</div>
-                    <div class="text-rose-600 font-bold text-2xl">-Rp. 150.000</div>
+                <!-- Bagian ini tetap justify-between di layar kecil -->
+                <div class="flex w-full md:w-auto justify-between md:justify-end mt-3 md:mt-0">
+                  <div class="text-gray-600 font-semibold text-lg md:hidden">Pemasukan Saldo</div>
+                  <div class="text-emerald-600 font-bold text-lg md:text-2xl">+Rp. 200.000</div>
+                </div>
+              </div>
+              <div class="relative flex md:flex-row flex-col items-start md:items-center justify-between bg-white shadow-md md:p-4 p-3 rounded-lg">
+                <div class="flex items-center w-full md:w-auto">
+                  <!-- Icon tetap di kiri -->
+                  <div class="md:w-12 w-15 h-15 md:h-12 flex items-center justify-center rounded-full bg-amber-100 md:bg-amber-600">
+                    <i class="fa-solid fa-download text-amber-600 md:text-white text-2xl"></i>
                   </div>
-                  <div class="flex items-center justify-between bg-white shadow-md p-4 rounded-lg">
-                    <div class="flex items-center">
-                      <div class="text-emerald-600">
-                        <i class="fa-solid fa-download text-4xl"></i>
-                      </div>
-                      <div class="ml-3">
-                        <h3 class="text-xl font-bold text-gray-800">Ahmad Zaki</h3>
-                        <p class="text-sm text-gray-500">Kelas: XI IPA</p>
-                        <p class="text-xs text-gray-400">25 Maret 2024 | 14:10:01</p>
-                      </div>
-                    </div>
-                    <div class="text-gray-600 font-semibold text-lg">Pemasukan Saldo</div>
-                    <div class="text-emerald-600 font-bold text-2xl">+Rp. 200.000</div>
+                  <div class="ml-3">
+                    <h3 class="text-lg md:text-xl font-bold text-gray-800">Muhammad Ikhlas</h3>
+                    <p class="text-sm text-gray-500">Kelas: XI IPA</p>
+                    <p class="text-xs text-gray-400">25 Maret 2024 | 14:10:01</p>
                   </div>
+                </div>
 
-                  <div class="flex items-center justify-between bg-white shadow-md p-4 rounded-lg">
-                    <div class="flex items-center">
-                      <div class="text-rose-600">
-                        <i class="fa-solid fa-upload text-4xl"></i>
-                      </div>
-                      <div class="ml-3">
-                        <h3 class="text-xl font-bold text-gray-800">Siti Aisyah</h3>
-                        <p class="text-sm text-gray-500">Kelas: XI IPA</p>
-                        <p class="text-xs text-gray-400">25 Maret 2024 | 14:45:30</p>
-                      </div>
-                    </div>
-                    <div class="text-gray-600 font-semibold text-lg">Penarikan Saldo</div>
-                    <div class="text-rose-600 font-bold text-2xl">-Rp. 150.000</div>
-                  </div>
-                  <div class="flex items-center justify-between bg-white shadow-md p-4 rounded-lg">
-                    <div class="flex items-center">
-                      <div class="text-emerald-600">
-                        <i class="fa-solid fa-download text-4xl"></i>
-                      </div>
-                      <div class="ml-3">
-                        <h3 class="text-xl font-bold text-gray-800">Ahmad Zaki</h3>
-                        <p class="text-sm text-gray-500">Kelas: XI IPA</p>
-                        <p class="text-xs text-gray-400">25 Maret 2024 | 14:10:01</p>
-                      </div>
-                    </div>
-                    <div class="text-gray-600 font-semibold text-lg">Pemasukan Saldo</div>
-                    <div class="text-emerald-600 font-bold text-2xl">+Rp. 200.000</div>
-                  </div>
+                <!-- Wrapper untuk teks tengah di desktop -->
+                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 text-gray-600 font-semibold text-xl">Pemasukan Saldo</div>
 
-                  <div class="flex items-center justify-between bg-white shadow-md p-4 rounded-lg">
-                    <div class="flex items-center">
-                      <div class="text-rose-600">
-                        <i class="fa-solid fa-upload text-4xl"></i>
-                      </div>
-                      <div class="ml-3">
-                        <h3 class="text-xl font-bold text-gray-800">Siti Aisyah</h3>
-                        <p class="text-sm text-gray-500">Kelas: XI IPA</p>
-                        <p class="text-xs text-gray-400">25 Maret 2024 | 14:45:30</p>
-                      </div>
-                    </div>
-                    <div class="text-gray-600 font-semibold text-lg">Penarikan Saldo</div>
-                    <div class="text-rose-600 font-bold text-2xl">-Rp. 250.000</div>
-                  </div>
+                <!-- Bagian ini tetap justify-between di layar kecil -->
+                <div class="flex w-full md:w-auto justify-between md:justify-end mt-3 md:mt-0">
+                  <div class="text-gray-600 font-semibold text-lg md:hidden">Pemasukan Saldo</div>
+                  <div class="text-amber-600 font-bold text-lg md:text-2xl">+Rp. 200.000</div>
                 </div>
               </div>
             </div>

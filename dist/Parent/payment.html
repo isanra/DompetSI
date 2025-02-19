@@ -81,43 +81,73 @@
       </div>
     </aside>
 
-    <div class="flex-1 p-6 sm:ml-64">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20">
-        <!-- Div Profil + Saldo -->
-        <div class="md:col-span-2 flex flex-col gap-6">
-          <div class="md:bg-white p-6 md:shadow-md rounded-lg rounded-tl-5xl flex items-center h-30 md:h-auto">
-            <img
-              src="https://media.licdn.com/dms/image/v2/D4D03AQG57T_BHT0xOw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684638937145?e=1745452800&v=beta&t=5PXD2EZKgLokn6jBu8FjwekhUboSg5tRNNYc_uf7zEQ"
-              alt="Foto Orang"
-              class="w-25 sm:w-40 h-auto rounded-full mr-4 shadow-md border"
-            />
-            <div>
-              <h3 class="text-2xl md:text-5xl font-bold">Azzam Hudiya Rahman</h3>
-              <p class="text-sm md:text-xl text-gray-600">Kelas 2 Pondok / 3 SMA</p>
+    <div class="p-6 sm:ml-64 mt-20">
+      <div class="">
+        <!-- Form Pengisian Saldo -->
+
+        <!-- Metode Pembayaran dan Ringkasan Transaksi -->
+        <div class="md:bg-white md:p-6 md:shadow-md rounded-lg">
+          <h2 class="text-2xl font-bold mb-4">Metode Pembayaran</h2>
+          <div class="space-y-3 metode-pembayaran flex-grow overflow-auto scrollbar-hide">
+            <label class="flex justify-between items-center p-3 rounded-lg cursor-pointer hover:bg-gray-100">
+              <div class="flex items-center">
+                <img src="/assets/img/bsi.png" alt="BSI" class="w-6 h-6 mr-2" />
+                <span class="font-medium">Bank Syariah Indonesia</span>
+              </div>
+              <input type="radio" name="payment" value="BSI" class="custom-radio" />
+            </label>
+
+            <label class="flex justify-between items-center p-3 rounded-lg cursor-pointer hover:bg-gray-100">
+              <div>
+                <div class="flex items-center">
+                  <img src="/assets/img/bca.png" alt="BCA" class="w-6 h-6 mr-2" />
+                  <span class="font-medium">BCA Virtual Account</span>
+                </div>
+              </div>
+              <input type="radio" name="payment" value="bca_va" class="custom-radio" />
+            </label>
+            <label class="flex justify-between items-center p-3 rounded-lg cursor-pointer hover:bg-gray-100">
+              <div>
+                <div class="flex items-center">
+                  <img src="/assets/img/mandiri.png" alt="mandiri" class="w-6 h-6 mr-2" />
+                  <span class="font-medium">Mandiri Virtual Account</span>
+                </div>
+              </div>
+              <input type="radio" name="payment" value="mandiri" class="custom-radio" />
+            </label>
+            <label class="flex justify-between items-center p-3 rounded-lg cursor-pointer hover:bg-gray-100">
+              <div>
+                <div class="flex items-center">
+                  <img src="/assets/img/bni.png" alt="BNI" class="w-6 h-6 mr-2" />
+                  <span class="font-medium">BNI Virtual Account</span>
+                </div>
+              </div>
+              <input type="radio" name="payment" value="bni_va" class="custom-radio" />
+            </label>
+            <label class="flex justify-between items-center p-3 rounded-lg cursor-pointer hover:bg-gray-100">
+              <div>
+                <div class="flex items-center">
+                  <img src="/assets/img/briva.png" alt="BRI" class="w-6 h-6 mr-2" />
+                  <span class="font-medium">BRI Virtual Account</span>
+                </div>
+              </div>
+              <input type="radio" name="payment" value="bri_va" class="custom-radio" />
+            </label>
+          </div>
+
+          <!-- Ringkasan Transaksi -->
+          <div class="mt-6 p-4 bg-white shadow-md rounded-lg">
+            <h3 class="text-lg font-semibold">Ringkasan transaksi</h3>
+            <div class="text-gray-700 mt-2 space-y-2">
+              <p>Saldo yang ingin diisi: <span id="saldo" class="font-medium">Rp100.000</span></p>
+              <p>Pajak: <span id="pajak" class="font-medium">Rp2.000</span></p>
             </div>
+            <hr class="my-4" />
+            <p class="text-lg font-bold">Total Tagihan: <span id="total" class="text-amber-600">Rp102.000</span></p>
           </div>
-          <div class="bg-amber-600 p-6 shadow-md shadow-amber-700 rounded-lg flex flex-col justify-center">
-            <p class="text-xl text-gray-200 p-0">Saldo</p>
-            <h3 class="text-3xl md:text-5xl font-bold flex items-center text-white">
-              IDR 25.000.000 <a href="Transaksi.html" class="ms-3"><i class="fa-solid fa-plus bg-white text-sm md:text-xl p-2 mb-2 md:mb-3 rounded-full text-amber-600 shadow-sm shadow-white"></i></a>
-            </h3>
-          </div>
-        </div>
-        <!-- Div Riwayat -->
-        <div class="md:bg-white md:p-6 md:shadow-md rounded-lg md:col-span-1">
-          <h4 class="text-lg font-semibold md:font-bold md:bg-amber-600 md:p-3 py-1 rounded-lg text-gray-500 md:text-white md:shadow-md md:shadow-amber-600">Riwayat Pengambilan Terbaru</h4>
-          <div class="bg-amber-600 p-2 shadow-md shadow-amber-700 rounded-lg md:h-20 mt-2">
-            <p class="text-md text-gray-300">01/25/2025</p>
-            <h3 class="text-xl md:text-4xl font-bold text-white">IDR 300.000</h3>
-          </div>
-          <div class="bg-amber-600 p-2 shadow-md shadow-amber-700 rounded-lg md:h-20 mt-2">
-            <p class="text-md text-gray-300">01/25/2025</p>
-            <h3 class="text-xl md:text-4xl font-bold text-white">IDR 300.000</h3>
-          </div>
-          <div class="bg-amber-600 p-2 shadow-md shadow-amber-700 rounded-lg md:h-20 mt-2">
-            <p class="text-md text-gray-300">01/25/2025</p>
-            <h3 class="text-xl md:text-4xl font-bold text-white">IDR 300.000</h3>
-          </div>
+
+          <!-- Tombol Pembayaran -->
+          <button class="w-full bg-amber-500 text-white p-3 mt-4 rounded-lg text-lg font-semibold hover:bg-amber-600">Bayar Sekarang</button>
         </div>
       </div>
     </div>
