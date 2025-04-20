@@ -7,7 +7,7 @@
     <link href="/src/output.css" rel="stylesheet" />
   </head>
 
-  <body class="bg-gray-100 md:overflow-hidden">
+  <body class="bg-gray-100 lg:overflow-hidden">
     <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-b-4xl">
       <div class="px-3 py-3 lg:px-5 lg:pl-3">
         <div class="flex items-center justify-between">
@@ -28,7 +28,7 @@
                 ></path>
               </svg>
             </button>
-            <a href="" class="flex ms-2 md:me-24">
+            <a href="" class="flex ms-2 lg:me-24">
               <img src="/assets/img/logo.png" class="h-10 me-3" alt="FlowBite Logo" />
               <span class="self-center text-2xl font-bold sm:text-3xl whitespace-nowrap dark:text-white">Dompet<span class="text-amber-600">SI</span> </span>
             </a>
@@ -39,7 +39,7 @@
 
     <aside
       id="logo-sidebar"
-      class="fixed top-0 left-0 z-40 w-64 md:mt-25 rounded-tr-5xl h-screen pt-20 md:pt-5 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700 shadow-2xl"
+      class="fixed top-0 left-0 z-40 w-64 lg:mt-25 rounded-tr-5xl h-screen pt-20 lg:pt-5 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700 shadow-2xl"
       aria-label="Sidebar"
     >
       <div class="h-full px-3 pb-4 overflow-y-auto">
@@ -76,28 +76,40 @@
     </aside>
 
     <div class="flex-1 p-6 sm:ml-64">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-20">
         <!-- Div Profil + Saldo -->
-        <div class="md:col-span-2 flex flex-col gap-6">
-          <div class="md:bg-white p-6 md:shadow-md rounded-lg rounded-tl-5xl flex items-center h-30 md:h-auto">
+        <div class="lg:col-span-2 flex flex-col gap-6">
+          <div class="lg:bg-white p-6 lg:shadow-md rounded-lg rounded-tl-5xl flex items-center h-30 lg:h-auto">
             <img
               src="https://media.licdn.com/dms/image/v2/D4D03AQG57T_BHT0xOw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684638937145?e=1745452800&v=beta&t=5PXD2EZKgLokn6jBu8FjwekhUboSg5tRNNYc_uf7zEQ"
               alt="Foto Orang"
-              class="w-25 sm:w-40 h-auto rounded-full mr-4 shadow-md border"
+              class="w-25 sm:w-30 h-auto rounded-full mr-4 shadow-md border"
             />
             <div>
-              <h3 class="text-2xl md:text-5xl font-bold">Azzam Hudiya Rahman</h3>
-              <p class="text-sm md:text-xl text-gray-600">Kelas 2 Pondok / 3 SMA</p>
+              <h3 class="text-2xl lg:text-5xl font-bold">Azzam Hudiya Rahman</h3>
+              <p class="text-sm lg:text-xl text-gray-600">Kelas 2 Pondok / 3 SMA</p>
             </div>
           </div>
-          <div class="bg-amber-600 p-6 shadow-md shadow-amber-700 rounded-lg flex flex-col justify-center">
-            <p class="text-xl text-gray-200 p-0">Saldo</p>
-            <h3 class="text-3xl md:text-5xl font-bold flex items-center text-white">Rp 25.000.000 <a href="Transaksi.html" class="ms-3"></a></h3>
+          <div class="p-6 shadow-lg lg:shadow-md shadow-amber-700 rounded-3xl lg:rounded-xl flex flex-col justify-center relative overflow-hidden bg-gradient-to-r from-amber-700 via-amber-600 to-amber-500">
+            <!-- Lingkaran 1 -->
+            <div class="absolute -bottom-12 lg:-bottom-64 -right-8 lg:-right-32 w-32 lg:w-96 h-32 lg:h-96 border-8 border-white rounded-full opacity-30"></div>
+
+            <!-- Lingkaran 2 -->
+            <div class="absolute -bottom-20 lg:-bottom-40 -right-16 lg:-right-12 w-48 lg:w-60 h-48 lg:h-60 border-8 border-white rounded-full opacity-20"></div>
+
+            <!-- Konten utama -->
+            <p class="text-xl text-gray-100 p-0">Saldo</p>
+            <h3 class="text-3xl lg:text-5xl font-bold flex items-center text-white">
+              Rp 25.000.000
+              <a href="/dist/Parent/transaksi.html" class="ms-3">
+                <i class="fa-solid fa-plus bg-white text-lg lg:text-xl p-2 mb-2 lg:mb-3 rounded-full text-amber-600 shadow-sm shadow-white"></i>
+              </a>
+            </h3>
           </div>
         </div>
-        <!-- Div Riwayat -->
-        <div class="md:bg-white md:p-6 md:shadow-md rounded-lg md:col-span-1">
-          <h4 class="text-lg font-bold bg-amber-600 p-3 py-1 rounded-lg text-white shadow-md shadow-amber-600">Pengajuan Pengambilan Duit</h4>
+        <!-- pengajuan -->
+        <div class="lg:bg-white lg:p-6 lg:shadow-md rounded-lg lg:col-span-1 mt-10">
+          <h4 class="text-lg font-bold text-black">Pengajuan Pengambilan Duit</h4>
           <form class="mt-4">
             <div class="mb-4">
               <label class="block text-gray-700">Jumlah Uang</label>
