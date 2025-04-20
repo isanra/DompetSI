@@ -7,12 +7,12 @@
     <link href="/src/output.css" rel="stylesheet" />
   </head>
 
-  <body class="bg-gray-100 md:overflow-hidden">
-    <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-b-4xl hidden md:flex">
+  <body class="bg-gray-100 lg:overflow-hidden">
+    <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-b-4xl hidden lg:flex">
       <div class="px-3 py-3 lg:px-5 lg:pl-3">
         <div class="flex items-center justify-between">
           <div class="flex items-center justify-start rtl:justify-end">
-            <a href="" class="flex ms-2 md:me-24">
+            <a href="" class="flex ms-2 lg:me-24">
               <img src="/assets/img/logo.png" class="h-10 me-3" alt="FlowBite Logo" />
               <span class="self-center text-2xl font-bold sm:text-3xl whitespace-nowrap dark:text-white">Dompet<span class="text-amber-600">SI</span> </span>
             </a>
@@ -22,24 +22,24 @@
     </nav>
     <nav>
       <!-- Mobile Navbar: hanya tampil di HP -->
-      <div class="pt-4 ps-2">
+      <div class="pt-4 ps-4">
         <div class="flex items-center gap-3">
           <!-- Tombol Keluar -->
           <a href="/dist/Parent/Profil.html">
-            <button class="text-2xl font-bold text-gray-500 ">
+            <button class="text-2xl font-bold text-gray-500">
               <i class="fa-solid fa-arrow-left"></i>
             </button>
           </a>
 
           <!-- Judul Riwayat -->
-          <h4 class="text-lg md:text-3xl ps-3 md:hidden text-gray-600 font-bold">Riwayat Transaksi</h4>
+          <h4 class="text-lg lg:text-3xl ps-3 lg:hidden text-gray-600 font-bold">Riwayat Transaksi</h4>
         </div>
       </div>
     </nav>
 
     <aside
       id="logo-sidebar"
-      class="fixed top-0 left-0 z-40 w-64 md:mt-25 rounded-tr-5xl h-screen pt-20 md:pt-5 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700 shadow-2xl"
+      class="fixed top-0 left-0 z-40 w-64 lg:mt-25 rounded-tr-5xl h-screen pt-20 lg:pt-5 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700 shadow-2xl"
       aria-label="Sidebar"
     >
       <div class="h-full px-3 pb-4 overflow-y-auto">
@@ -81,41 +81,41 @@
       </div>
     </aside>
 
-    <div class="flex-1 px-6 py-0 md:p-6 sm:ml-64 mt-8">
+    <div class="flex-1 px-6 py-0 lg:p-6 sm:ml-64 mt-8">
       <div class="">
-        <div class="md:bg-white md:p-6 md:shadow-md md:shadow-gray-300 rounded-tl-5xl rounded-lg">
+        <div class="lg:bg-white lg:p-6 lg:shadow-lg lg:shadow-gray-300 rounded-tl-5xl rounded-lg">
           <div class="grid grid-cols-1 gap-2">
-            <h4 class="text-lg md:text-3xl md:pt-5 pt-0 text-gray-600 ps-4 font-bold mb-5 md:mb-10 hidden md:inline-block">Riwayat Transaksi</h4>
+            <h4 class="text-lg lg:text-3xl lg:pt-5 pt-0 text-gray-600 ps-4 font-bold mb-5 lg:mb-10 hidden lg:inline-block">Riwayat Transaksi</h4>
             <div class="flex flex-col h-screen">
               <div class="container-riwayat flex-grow overflow-auto scrollbar-hide">
                 <!-- Transaksi 1 -->
-                <div class="flex items-center bg-white shadow-md md:shadow-lg rounded-lg px-4 pb-2 md:p-4 mb-3">
-                  <div class="md:w-12 w-15 h-15 md:h-12 flex items-center justify-center rounded-full bg-emerald-100 md:bg-emerald-600">
-                    <i class="fa-solid fa-download text-emerald-600 md:text-white text-2xl"></i>
+                <div class="flex items-center bg-white shadow-lg lg:shadow-lg rounded-lg px-4 pb-2 lg:p-4 mb-3">
+                  <div class="lg:w-12 w-15 h-15 lg:h-12 flex items-center justify-center rounded-full bg-emerald-100 lg:bg-emerald-600">
+                    <i class="fa-solid fa-download text-emerald-600 lg:text-white text-2xl"></i>
                   </div>
-                  <div class="flex-1 ml-3 mt-5 md:mt-0">
-                    <h3 class="text-lg md:text-2xl font-bold text-gray-800">Pemasukan saldo</h3>
-                    <h3 class="text-md font-semibold text-emerald-600 mb-2 md:hidden">+Rp 200.000</h3>
+                  <div class="flex-1 ml-3 mt-5 lg:mt-0">
+                    <h3 class="text-lg lg:text-2xl font-bold text-gray-800">Pemasukan saldo</h3>
+                    <h3 class="text-md font-semibold text-emerald-600 mb-2 lg:hidden">+Rp 200.000</h3>
                     <!-- Ditampilkan hanya di HP -->
                     <p class="text-sm text-gray-500">25/03/2024 • 14:10</p>
                   </div>
-                  <h3 class="hidden md:block text-md md:text-2xl font-semibold md:font-bold text-emerald-600">+Rp 200.000</h3>
+                  <h3 class="hidden lg:block text-lg lg:text-2xl font-semibold lg:font-bold text-emerald-600">+Rp 200.000</h3>
                   <!-- Ditampilkan hanya di desktop -->
                 </div>
 
                 <!-- Transaksi 2 -->
 
-                <div class="flex items-center bg-white shadow-md md:shadow-lg rounded-lg px-4 pb-2 md:p-4 mb-3">
-                  <div class="md:w-12 w-15 h-15 md:h-12 flex items-center justify-center rounded-full bg-amber-100 md:bg-amber-600">
-                    <i class="fa-solid fa-upload text-amber-600 md:text-white text-2xl"></i>
+                <div class="flex items-center bg-white shadow-lg lg:shadow-lg rounded-lg px-4 pb-2 lg:p-4 mb-3">
+                  <div class="lg:w-12 w-15 h-15 lg:h-12 flex items-center justify-center rounded-full bg-amber-100 lg:bg-amber-600">
+                    <i class="fa-solid fa-upload text-amber-600 lg:text-white text-2xl"></i>
                   </div>
-                  <div class="flex-1 ml-3 mt-5 md:mt-0">
-                    <h3 class="text-lg md:text-2xl font-bold text-gray-800">Penarikan saldo</h3>
-                    <h3 class="text-md font-semibold text-amber-600 mb-2 md:hidden">-Rp 200.000</h3>
+                  <div class="flex-1 ml-3 mt-5 lg:mt-0">
+                    <h3 class="text-lg lg:text-2xl font-bold text-gray-800">Penarikan saldo</h3>
+                    <h3 class="text-md font-semibold text-amber-600 mb-2 lg:hidden">-Rp 200.000</h3>
                     <!-- Ditampilkan hanya di HP -->
                     <p class="text-sm text-gray-500">25/03/2024 • 14:10</p>
                   </div>
-                  <h3 class="hidden md:block text-md md:text-2xl font-semibold md:font-bold text-amber-600">+Rp 200.000</h3>
+                  <h3 class="hidden lg:block text-lg lg:text-2xl font-semibold lg:font-bold text-amber-600">+Rp 200.000</h3>
                   <!-- Ditampilkan hanya di desktop -->
                 </div>
               </div>

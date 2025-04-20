@@ -126,3 +126,8 @@ body#admin {
     margin-top: calc(var(--spacing) * 20);
   }
 }
+
+
+  .numpad-btn {
+    @apply bg-white text-2xl font-semibold p-4 rounded-lg shadow hover:bg-gray-100 active:bg-gray-200 text-center;
+  }
