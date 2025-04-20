@@ -3025,6 +3025,16 @@
       overflow: hidden;
     }
   }
+  .md\:rounded-2xl {
+    @media (width >= 48rem) {
+      border-radius: var(--radius-2xl);
+    }
+  }
+  .md\:rounded-xl {
+    @media (width >= 48rem) {
+      border-radius: var(--radius-xl);
+    }
+  }
   .md\:bg-amber-600 {
     @media (width >= 48rem) {
       background-color: var(--color-amber-600);
