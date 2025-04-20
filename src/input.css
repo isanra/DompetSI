@@ -1,10 +1,10 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
 
-@layer base {
-  html {
-    font-family: "Comfortaa", Arial, sans-serif;
-  }
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+body,
+input {
+  font-family: "Poppins", sans-serif;
 }
 
 .mt-30 {
@@ -119,4 +119,10 @@ body#admin {
   position: absolute;
 
   @apply bg-amber-600;
+}
+
+.md\:mt-20 {
+  @media (width >= 48rem) {
+    margin-top: calc(var(--spacing) * 20);
+  }
 }
