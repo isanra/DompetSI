@@ -8,7 +8,7 @@
   </head>
 
   <body class="bg-gray-100 md:overflow-hidden">
-    <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-b-4xl">
+    <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-b-4xl hidden md:flex">
       <div class="px-3 py-3 lg:px-5 lg:pl-3">
         <div class="flex items-center justify-between">
           <div class="flex items-center justify-start rtl:justify-end">
@@ -17,6 +17,22 @@
               <span class="self-center text-2xl font-bold sm:text-3xl whitespace-nowrap dark:text-white">Dompet<span class="text-amber-600">SI</span> </span>
             </a>
           </div>
+        </div>
+      </div>
+    </nav>
+    <nav>
+      <!-- Mobile Navbar: hanya tampil di HP -->
+      <div class="pt-4 ps-4">
+        <div class="flex items-center gap-3">
+          <!-- Tombol Keluar -->
+          <a href="/dist/Parent/Profil.html">
+            <button class="text-2xl font-bold text-gray-500">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+          </a>
+
+          <!-- Judul Riwayat -->
+          <h4 class="text-lg md:text-3xl ps-3 md:hidden text-gray-600 font-bold">Pembayaran</h4>
         </div>
       </div>
     </nav>

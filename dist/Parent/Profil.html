@@ -7,14 +7,14 @@
     <link href="/src/output.css" rel="stylesheet" />
   </head>
 
-  <body class="bg-gray-100 md:overflow-hidden">
-    <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-b-4xl hidden md:flex">
+  <body class="bg-gray-100 lg:overflow-hidden">
+    <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-b-4xl hidden lg:flex">
       <div class="px-3 py-3 lg:px-5 lg:pl-3">
         <div class="flex items-center justify-between">
           <div class="flex items-center justify-start rtl:justify-end">
-            <a href="" class="flex ms-2 md:me-24">
+            <a href="" class="flex ms-2 lg:me-24">
               <img src="/assets/img/logo.png" class="h-10 me-3" alt="FlowBite Logo" />
-              <span class="self-center text-2xl font-bold sm:text-3xl whitespace-nowrap dark:text-white">Dompet<span class="text-amber-600">SI</span> </span>
+              <span class="self-center text-2xl font-bold lg:text-3xl whitespace-nowrap dark:text-white">Dompet<span class="text-amber-600">SI</span> </span>
             </a>
           </div>
         </div>
@@ -22,13 +22,13 @@
     </nav>
     <nav>
       <!-- Mobile Navbar: hanya tampil di HP -->
-      <div class="flex items-center justify-between p-4 px-8 md:hidden">
+      <div class="flex items-center justify-between p-4 px-2 lg:hidden">
         <!-- Kiri: Foto + Info -->
         <div class="flex items-center">
           <img
             src="https://media.licdn.com/dms/image/v2/D4D03AQG57T_BHT0xOw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684638937145?e=1745452800&v=beta&t=5PXD2EZKgLokn6jBu8FjwekhUboSg5tRNNYc_uf7zEQ"
             alt="Foto Orang"
-            class="w-18 h-18 rounded-full mr-4 shadow-md border-3 border-gray-300"
+            class="w-18 h-18 rounded-full mr-4 shadow-sm shadow-amber-600"
           />
           <div>
             <h3 class="text-xl font-bold">Azzam Hudiya</h3>
@@ -36,16 +36,20 @@
           </div>
         </div>
 
-        <!-- Kanan: Tombol Keluar -->
-        <a href="/dist/masuk/index.html"
-          ><button class="text-2xl font-bold text-gray-500 hover:text-amber-500"><i class="fa-solid fa-arrow-right-from-bracket"></i></button
-        ></a>
+        <!-- Kanan: Tombol Telepon dengan Background Bullet -->
+        <a href="tel:+1234567890">
+          <button class="text-xl font-bold text-amber-600 hover:text-amber-500 relative rounded-full w-10 h-10 border-1 border-gray-300">
+            <!-- Ikon Telepon Arah Kiri -->
+            <i class="fa-solid fa-phone-flip"></i>
+            <!-- Background Bullet -->
+          </button>
+        </a>
       </div>
     </nav>
 
     <aside
       id="logo-sidebar"
-      class="fixed top-0 left-0 z-40 w-64 md:mt-25 rounded-tr-5xl h-screen pt-20 md:pt-5 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700 shadow-2xl"
+      class="fixed top-0 left-0 z-40 w-64 lg:mt-25 rounded-tr-5xl h-screen pt-20 lg:pt-5 transition-transform -translate-x-full bg-white border-r border-gray-200 lg:translate-x-0 dark:bg-gray-800 dark:border-gray-700 shadow-2xl"
       aria-label="Sidebar"
     >
       <div class="h-full px-3 pb-4 overflow-y-auto">
@@ -87,45 +91,45 @@
       </div>
     </aside>
 
-    <div class="flex-1 p-6 sm:ml-64">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:mt-20">
+    <div class="flex-1 p-6 lg:ml-64">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:mt-20">
         <!-- Div Profil + Saldo -->
-        <div class="md:col-span-2 flex flex-col gap-6">
-          <div class="md:bg-white p-6 md:shadow-md rounded-lg rounded-tl-5xl items-center h-30 md:h-auto hidden md:flex">
+        <div class="lg:col-span-2 flex flex-col gap-6">
+          <div class="lg:bg-white p-6 lg:shadow-lg rounded-lg rounded-tl-5xl items-center h-30 lg:h-auto hidden lg:flex">
             <img
               src="https://media.licdn.com/dms/image/v2/D4D03AQG57T_BHT0xOw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684638937145?e=1745452800&v=beta&t=5PXD2EZKgLokn6jBu8FjwekhUboSg5tRNNYc_uf7zEQ"
               alt="Foto Orang"
-              class="w-25 h-auto rounded-full mr-4 shadow-md border"
+              class="w-25 h-auto rounded-full mr-4 shadow-lg border"
             />
             <div>
-              <h3 class="text-2xl md:text-5xl font-bold">Azzam Hudiya Rahman</h3>
-              <p class="text-sm md:text-xl text-gray-600">Kelas 2 Pondok / 3 SMA</p>
+              <h3 class="text-2xl lg:text-5xl font-bold">Azzam Hudiya Rahman</h3>
+              <p class="text-lg lg:text-xl text-gray-600">Kelas 2 Pondok / 3 SMA</p>
             </div>
           </div>
-          <div class="bg-amber-600 p-6 shadow-md shadow-amber-700 rounded-3xl md:rounded-xl flex flex-col justify-center relative overflow-hidden">
+          <div class="p-6 shadow-lg lg:shadow-md shadow-amber-700 rounded-3xl lg:rounded-xl flex flex-col justify-center relative overflow-hidden bg-gradient-to-r from-amber-700 via-amber-600 to-amber-500">
             <!-- Lingkaran 1 -->
-            <div class="absolute -bottom-12 md:-bottom-64 -right-8 md:-right-32 w-32 md:w-96 h-32 md:h-96 border-8 border-white rounded-full opacity-30"></div>
+            <div class="absolute -bottom-12 lg:-bottom-64 -right-8 lg:-right-32 w-32 lg:w-96 h-32 lg:h-96 border-8 border-white rounded-full opacity-30"></div>
 
             <!-- Lingkaran 2 -->
-            <div class="absolute -bottom-20 md:-bottom-40 -right-16 md:-right-12 w-48 md:w-60 h-48 md:h-60 border-8 border-white rounded-full opacity-20"></div>
+            <div class="absolute -bottom-20 lg:-bottom-40 -right-16 lg:-right-12 w-48 lg:w-60 h-48 lg:h-60 border-8 border-white rounded-full opacity-20"></div>
 
             <!-- Konten utama -->
-            <p class="text-xl text-gray-200 p-0">Saldo</p>
-            <h3 class="text-3xl md:text-5xl font-bold flex items-center text-white">
+            <p class="text-xl text-gray-100 p-0">Saldo</p>
+            <h3 class="text-3xl lg:text-5xl font-bold flex items-center text-white">
               Rp 25.000.000
-              <a href="Transaksi.html" class="ms-3">
-                <i class="fa-solid fa-plus bg-white text-sm md:text-xl p-2 mb-2 md:mb-3 rounded-full text-amber-600 shadow-sm shadow-white"></i>
+              <a href="/dist/Parent/transaksi.html" class="ms-3">
+                <i class="fa-solid fa-plus bg-white text-lg lg:text-xl p-2 mb-2 lg:mb-3 rounded-full text-amber-600 shadow-sm shadow-white"></i>
               </a>
             </h3>
           </div>
         </div>
         <!-- Div Riwayat -->
-        <div class="md:bg-white md:p-6 md:shadow-md rounded-lg md:col-span-1 mt-8 md:mt-0">
+        <div class="lg:bg-white lg:p-6 lg:shadow-lg rounded-lg lg:col-span-1 mt-8 lg:mt-0">
           <!-- Header + Tombol Selengkapnya (hanya untuk mobile) -->
-          <div class="flex items-center justify-between mb-2 md:mb-5 md:block">
-            <h4 class="text-lg font-semibold md:font-bold md:p-4 md:bg-amber-600 text-gray-500 md:text-white py-1 rounded-lg md:shadow-md md:shadow-amber-600">Riwayat Transaksi Terbaru</h4>
+          <div class="flex items-center justify-between mb-2 lg:mb-5 lg:block">
+            <h4 class="text-lg font-bold lg:font-bold lg:p-4 lg:bg-amber-600 text-black lg:text-white py-1 rounded-lg lg:shadow-sm lg:shadow-amber-600">Riwayat Transaksi</h4>
             <!-- Tombol Selengkapnya (mobile only) -->
-            <a href="Riwayat.html" class="text-amber-600 hover:underline font-semibold text-lg sm:block md:hidden"> See All </a>
+            <a href="/dist/Parent/Riwayat.html" class="text-amber-600 hover:underline font-semibold text-md md:block lg:hidden">Lihat Semua </a>
           </div>
 
           <!-- Card 1 -->
@@ -133,10 +137,10 @@
             <div class="w-15 h-15 flex items-center justify-center rounded-full bg-amber-100">
               <i class="fa-solid fa-upload text-amber-600 text-2xl"></i>
             </div>
-            <div class="flex-1 ml-3 mt-5 md:mt-0">
-              <h3 class="text-lg md:text-xl font-bold text-gray-800">Penarikan saldo</h3>
+            <div class="flex-1 ml-3 mt-5 lg:mt-0">
+              <h3 class="text-lg lg:text-xl font-bold text-gray-800">Penarikan saldo</h3>
               <h3 class="text-lg font-semibold text-amber-600 mb-2">-Rp 200.000</h3>
-              <p class="text-sm text-gray-500">25/03/2024 • 14:10</p>
+              <p class="text-lg text-gray-500">25/03/2024 • 14:10</p>
             </div>
           </div>
 
@@ -145,10 +149,10 @@
             <div class="w-15 h-15 flex items-center justify-center rounded-full bg-amber-100">
               <i class="fa-solid fa-upload text-amber-600 text-2xl"></i>
             </div>
-            <div class="flex-1 ml-3 mt-5 md:mt-0">
-              <h3 class="text-lg md:text-xl font-bold text-gray-800">Penarikan saldo</h3>
+            <div class="flex-1 ml-3 mt-5 lg:mt-0">
+              <h3 class="text-lg lg:text-xl font-bold text-gray-800">Penarikan saldo</h3>
               <h3 class="text-lg font-semibold text-amber-600 mb-2">-Rp 100.000</h3>
-              <p class="text-sm text-gray-500">25/03/2024 • 14:10</p>
+              <p class="text-lg text-gray-500">25/03/2024 • 14:10</p>
             </div>
           </div>
 
@@ -157,10 +161,10 @@
             <div class="w-15 h-15 flex items-center justify-center rounded-full bg-amber-100">
               <i class="fa-solid fa-upload text-amber-600 text-2xl"></i>
             </div>
-            <div class="flex-1 ml-3 mt-5 md:mt-0">
-              <h3 class="text-lg md:text-xl font-bold text-gray-800">Penarikan saldo</h3>
+            <div class="flex-1 ml-3 mt-5 lg:mt-0">
+              <h3 class="text-lg lg:text-xl font-bold text-gray-800">Penarikan saldo</h3>
               <h3 class="text-lg font-semibold text-amber-600 mb-2">-Rp 200.000</h3>
-              <p class="text-sm text-gray-500">25/03/2024 • 14:10</p>
+              <p class="text-lg text-gray-500">25/03/2024 • 14:10</p>
             </div>
           </div>
         </div>
