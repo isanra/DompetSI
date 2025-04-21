@@ -36,11 +36,10 @@
           </div>
         </div>
 
-        <!-- Kanan: Tombol Telepon dengan Background Bullet -->
+        <!-- Kanan: Tombol setting dengan Background Bullet -->
         <a href="tel:+1234567890">
           <button class="text-xl font-bold text-amber-600 hover:text-amber-500 relative rounded-full w-10 h-10 border-1 border-gray-300">
-            <!-- Ikon Telepon Arah Kiri -->
-            <i class="fa-solid fa-phone-flip"></i>
+            <i class="fa-solid fa-gear"></i>
             <!-- Background Bullet -->
           </button>
         </a>
@@ -95,7 +94,15 @@
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:mt-20">
         <!-- Div Profil + Saldo -->
         <div class="lg:col-span-2 flex flex-col gap-6">
-          <div class="lg:bg-white p-6 lg:shadow-lg rounded-lg rounded-tl-5xl items-center h-30 lg:h-auto hidden lg:flex">
+          <div class="relative lg:bg-white p-6 lg:shadow-lg rounded-lg rounded-tl-5xl items-center h-30 lg:h-auto hidden lg:flex">
+            <!-- Tombol setting di pojok kanan atas -->
+            <a href="tel:+1234567890" class="absolute top-4 right-4 z-10">
+              <button class="text-xl font-bold text-amber-600 hover:text-amber-500 rounded-full w-10 h-10 border border-gray-300 flex items-center justify-center">
+                <i class="fa-solid fa-gear"></i>
+              </button>
+            </a>
+
+            <!-- Konten utama -->
             <img
               src="https://media.licdn.com/dms/image/v2/D4D03AQG57T_BHT0xOw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684638937145?e=1745452800&v=beta&t=5PXD2EZKgLokn6jBu8FjwekhUboSg5tRNNYc_uf7zEQ"
               alt="Foto Orang"
@@ -106,6 +113,7 @@
               <p class="text-lg lg:text-xl text-gray-600">Kelas 2 Pondok / 3 SMA</p>
             </div>
           </div>
+
           <div class="p-6 shadow-lg lg:shadow-md shadow-amber-700 rounded-3xl lg:rounded-xl flex flex-col justify-center relative overflow-hidden bg-gradient-to-r from-amber-700 via-amber-600 to-amber-500">
             <!-- Lingkaran 1 -->
             <div class="absolute -bottom-12 lg:-bottom-64 -right-8 lg:-right-32 w-32 lg:w-96 h-32 lg:h-96 border-8 border-white rounded-full opacity-30"></div>
