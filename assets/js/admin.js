@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Hapus kelas aktif dari semua link
     sidebarLinks.forEach((link) => link.classList.remove("sidebar-active"));
 
+    console.log("ok");
+
     // Cari link yang sesuai dengan halaman saat ini
     sidebarLinks.forEach((link) => {
       if (link.href === window.location.href) {

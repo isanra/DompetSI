@@ -1,5 +1,11 @@
 <?php
-include 'koneksi.php';
+require_once '../../connection.php';
+session_start();
+
+if (!isset($_SESSION['loggedin'])) {
+  header("Location: /index.php");
+  exit();
+}
 
 $keyword = isset($_GET['search']) ? $_GET['search'] : '';
 $sql = "SELECT * FROM santri";
@@ -8,19 +14,18 @@ if (!empty($keyword)) {
 }
 $result = $conn->query($sql);
 ?>
+
 <!DOCTYPE html>
-<html lang="id">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link href="/src/output.css" rel="stylesheet" />
-
-    <style></style>
   </head>
-<body class="bg-gray-100 p-6">
 
-<nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-b-4xl">
+  <body class="bg-gray-100 md:overflow-hidden">
+    <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-b-4xl">
       <div class="px-3 py-3 lg:px-5 lg:pl-3">
         <div class="flex items-center justify-between">
           <div class="flex items-center justify-start rtl:justify-end">
@@ -42,7 +47,7 @@ $result = $conn->query($sql);
             </button>
             <a href="" class="flex ms-2 md:me-24">
               <img src="/assets/img/logo.png" class="h-10 me-3" alt="FlowBite Logo" />
-              <span class="self-center text-2xl font-bold sm:text-3xl whitespace-nowrap dark:text-white">Dompet<span class="text-amber-600">SI</span> </span>
+              <span class="self-center text-2xl font-bold sm:text-3xl whitespace-nowrap dark:text-white">Dompet<span class="text-emerald-600">SI</span> </span>
             </a>
           </div>
         </div>
@@ -76,7 +81,7 @@ $result = $conn->query($sql);
           </li>
 
           <li>
-            <a href="/dist/Masuk.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+            <a href="../logout.php" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
               <svg class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3" />
               </svg>
@@ -118,5 +123,6 @@ $result = $conn->query($sql);
   </div>
 
 </body>
+  <script src="/assets/js/parent.js"></script>
 </html>
 <?php $conn->close(); ?>
