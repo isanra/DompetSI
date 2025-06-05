@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,24 +11,13 @@
   </head>
 
   <body class="bg-gray-100 md:overflow-hidden">
-    <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-b-4xl hidden md:flex">
-      <div class="px-3 py-3 lg:px-5 lg:pl-3">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center justify-start rtl:justify-end">
-            <a href="" class="flex ms-2 md:me-24">
-              <img src="/assets/img/logo.png" class="h-10 me-3" alt="FlowBite Logo" />
-              <span class="self-center text-2xl font-bold sm:text-3xl whitespace-nowrap dark:text-white">Dompet<span class="text-amber-600">SI</span> </span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
+  <?php require_once('../../php/sidebar-parent.php'); ?>
     <nav>
       <!-- Mobile Navbar: hanya tampil di HP -->
       <div class="pt-4 ps-4">
         <div class="flex items-center gap-3">
           <!-- Tombol Keluar -->
-          <a href="/dist/Parent/Profil.html">
+          <a href="/dist/parent/profil.php">
             <button class="text-2xl font-bold text-gray-500">
               <i class="fa-solid fa-arrow-left"></i>
             </button>
@@ -37,49 +29,7 @@
       </div>
     </nav>
 
-    <aside
-      id="logo-sidebar"
-      class="fixed top-0 left-0 z-40 w-64 md:mt-25 rounded-tr-5xl h-screen pt-20 md:pt-5 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700 shadow-2xl"
-      aria-label="Sidebar"
-    >
-      <div class="h-full px-3 pb-4 overflow-y-auto">
-        <ul class="space-y-2 font-semibold text-xl">
-          <li>
-            <a href="/dist/Parent/Profil.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <span><i class="fa-solid fa-user"></i></span>
-              <span class="ms-3">Profil</span>
-            </a>
-          </li>
-          <li>
-            <a href="/dist/Parent/Riwayat.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <span><i class="fa-solid fa-list-alt"></i></span>
-              <span class="flex-1 ms-3 whitespace-nowrap">Riwayat</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="/dist/Parent/Transaksi.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <span><i class="fa-solid fa-money-bill-transfer"></i></span>
-              <span class="flex-1 ms-3 whitespace-nowrap">Transaksi</span>
-            </a>
-          </li>
-          <li class="mb-10">
-            <a href="" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <span><i class="fa-solid fa-phone"></i></span>
-              <span class="flex-1 ms-3 whitespace-nowrap">Hubungi Admin</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="/dist/masuk/index.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <svg class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3" />
-              </svg>
-              <span class="flex-1 ms-3 whitespace-nowrap">Keluar</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </aside>
+    
 
     <div class="p-6 sm:ml-64 mt-20">
       <div class="">

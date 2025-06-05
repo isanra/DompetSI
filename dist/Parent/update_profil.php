@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,7 +22,7 @@
         <div class="px-8 py-6">
           <div class="relative mb-8">
             <!-- Tombol Back -->
-            <a href="/dist/Parent/Profil.html" class="absolute left-0 top-1/2 -translate-y-1/2">
+            <a href="/dist/Parent/Profil.php" class="absolute left-0 top-1/2 -translate-y-1/2">
               <button class="text-2xl font-bold text-gray-500">
                 <i class="fa-solid fa-arrow-left"></i>
               </button>
